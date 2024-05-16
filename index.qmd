@@ -1,0 +1,127 @@
+---
+title: "Observed Relations between Intra-Individual and Real-World Outcomes in a Sample of Autistic and Non-Autistic Youth"
+bibliography: references.bib
+author: 
+  - name: Kathryn M. Hauschild
+    affiliations:
+    - name: Farmingdale State College
+  - name: Talena C. Day
+    affiliations:
+    - name: Stony Brook University
+  - name: Elliot G. Keenan
+    affiliations:
+    - name: Stony Brook University
+  - name: David A. Brocker
+    affiliations:
+    - name: Farmingdale State College
+  - name: Brianna L. Gonzalez
+    affiliations:
+    - name: Farmingdale State College
+  - name: Christian C. Luhmann
+    affiliations:
+    - name: Stony Brook University
+  - name: Matthew D. Lerner
+    affiliations:
+    - name: Stony Brook University
+    - name: Drexel University
+---
+
+# Background
+
+-   Research has begun to characterize the **relations between intra-individual and "real word" outcomes** for autistic and non-autistic adults [@morrison2020].
+
+-   However, very little research has **directly linked these levels of analysis** *for autistic youth**.***
+
+-   An understanding of these relations is crucial for the development of precise and ecologically valid social intervention programs for autistic youth.
+
+# Objective
+
+To examine the relations between emotion recognition, mental
+state understanding, and ecologically valid measures of social
+behavior in a sample of autistic and non-autistic youth.
+
+![Table 1](images/demo_table.png)
+
+# Method	
+
+-   **Autism feature levels** were assessed using the Autism
+    Diagnostic Observation Schedule (ADOS-2), [@lord2012]
+    Comparison Score (CS), [@gotham2009; @hus2014]
+    							
+
+-   **Facial emotion recognition (FER)** and **vocal emotion
+    recognition (VER)** were measured using the Diagnostic
+    Analysis of Nonverbal Accuracy, volume 2 (DANVA-2)
+    [@nowicki2008].
+    							
+
+-   **Theory of Mind (ToM)** was assessed using the SELWeb
+    measure of social cognition [@russo-ponsaran2019].
+    							
+
+-   Proportion of **reciprocated friendships** was measured
+    using peer-rated sociometric procedures [@coie1982]
+    administered by primary teachers in a classroom setting.						
+
+-   **Positive, negative, and low-level peer interaction
+    behaviors** were measured by trained coders following a peer
+    interaction assessment [@mcnair2023].
+
+# Results
+
+![Figure 1. Correlations between intra-individual variables (emotion recognition, ToM) and social outcomes (autism feature level, peer interaction behaviors, sociometric-ratings) for Autistic Youth](images/cormat_asd.png)
+					
+
+![Figure 2. Correlations between intra-individual variables (emotion recognition, ToM) and social outcomes (autism feature level, peer interaction behaviors, sociometric-ratings) for Non-Autistic Youth](images/cormat_nasd.png)
+
+### Data Dictionary
+
+```{r}
+#| echo: false
+#| warning: false
+library(dplyr,quietly = TRUE)
+library(huxtable)
+h <- 
+  data.frame(
+  var_name = c("FER" ,"VER" ,"ToM" , 
+             "Rfriend" ,"post" , "negT" ,
+             "lowT" ,"poU" ,"posV" ,"negU" ,
+             "negV" ,"lowU" ,"lowV"),
+var_def = c("facial emotion recognition","vocal emotion recognition",
+            "Theory of Mind","reciprocated friendships",
+            'total positive behaviors','total negative behaviors',
+            "total low-level behaviors",
+            "positive behaviors during an unstructured activity",
+            "positive behaviors during a minimally-structured verbal activity",
+            "negative behaviors during an unstructured activity",
+            "negative behaviors during a minimally-structured verbal activity",
+            "low-level behaviors during an unstructured activity",
+            "low-level behaviors during a minimally-structured verbal activity")) |> 
+  hux() |> 
+  theme_article() |> 
+  set_width(1.5)
+
+h[1,1:2] <- c("Variable Name", "Variable Definition")
+h
+```
+
+# Conclusions				
+
+-   Results suggest a more **complex and subtle relationship
+    between emotion recognition, mental state
+    understanding, and social outcomes** than has been previously
+    reported, and **which differs between autistic and non-
+    autistic youth**.					
+
+-   While **emotion recognition** (particularly vocal) correlated with
+    social outcomes more strongly for some outcome measures, the
+    overall pattern of effects suggest that **ToM** (mental state
+    understanding) **was more consistently related to outcomes
+    across measures in the autistic sample**, albeit not always in a
+    positive direction.
+
+-   **Present findings** not only better elucidate the relation between
+    intra-individual variables and “real world” social outcomes for
+    autistic youth, but also **identify promising targets for the
+    development of individualized social intervention
+    programs.**
